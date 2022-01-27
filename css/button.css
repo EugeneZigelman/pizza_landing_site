@@ -1,0 +1,45 @@
+.button_contact {
+  flex: 0 0 auto;
+  height: 7vh;
+  min-width: 200px;
+  background-color: gold;
+  color: red;
+  align-items: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 5px 5px red;
+  animation: pulse 1.5s linear infinite;
+  font-size: 28px;
+}
+
+.button_contact:hover {
+  animation-play-state: paused;
+}
+
+.button_contact:active {
+  top: 5px;
+  box-shadow: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=button.css.map */

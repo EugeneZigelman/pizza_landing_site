@@ -1,0 +1,303 @@
+html,
+body {
+  height: 100%;
+  background-color: #cac0c0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: #fff; */
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease 0;
+  transition: opacity 0.8s ease 0;
+}
+
+.wrapper._loaded {
+  opacity: 1;
+}
+
+.wrapper._loaded .header {
+  -webkit-transition: -webkit-transform 0.8s ease 0.8s;
+  transition: -webkit-transform 0.8s ease 0.8s;
+  transition: transform 0.8s ease 0.8s;
+  transition: transform 0.8s ease 0.8s, -webkit-transform 0.8s ease 0.8s;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.wrapper._loaded .page__pagination {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.6s ease 0.8s;
+  transition: -webkit-transform 0.6s ease 0.8s;
+  transition: transform 0.6s ease 0.8s;
+  transition: transform 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s;
+}
+
+.wrapper._free .page__pagination {
+  -webkit-transition: all 0.8s ease 0.8s;
+  transition: all 0.8s ease 0.8s;
+  -webkit-transform: translate(50px, 50px);
+  transform: translate(50px, 50px);
+  opacity: 0;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /* border: 5px solid rgb(207, 90, 192); */
+}
+
+.page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.page__screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.page__pagination {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  -webkit-transform: translate(0px, -50%);
+  transform: translate(0px, -50%);
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* border: 5px solid rgb(32, 139, 0); */
+}
+
+.page__bullet {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 155, .5);
+  margin: 10px 0;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.5s ease 0;
+  transition: background-color 0.5s ease 0;
+}
+
+.page__bullet_active {
+  background-color: #ffe100;
+}
+
+.page__scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.page__drag-scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.screen {
+  text-align: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  position: relative;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  background: url("/img/pizza/fon.png") no-repeat center/cover;
+}
+
+.screen__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 15;
+  -webkit-transform: translate(0px, 8vh);
+  transform: translate(0px, 8vh);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.screen__title {
+  font-size: 9vh;
+  color: #fff;
+  /* margin: 0 0 30px 0; */
+  /* display: inline-block; */
+}
+
+.screen__title_bg {
+  padding: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* box-shadow: 0 0px 55px 55px rgba(46, 43, 42, 0.5); */
+  z-index: 15;
+}
+
+.screen__toledo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5vh;
+  font-weight: 400;
+  line-height: 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(green), color-stop(white), to(red));
+  background-image: linear-gradient(0deg, green, white, red);
+}
+
+.screen__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* border: 10px solid rgb(0, 134, 139); */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  z-index: 1;
+}
+
+.screen__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /* border: 10px solid rgb(241, 245, 27); */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.screen__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* border: 10px solid rgb(93, 94, 48); */
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.screen__text {
+  font-size: 20px;
+  line-height: 130%;
+  color: #fff;
+}
+
+.screen__text p {
+  margin: 0 0 20px 10px;
+}
+
+.screen__text p:last-child {
+  margin-bottom: 0;
+}
+
+.menu__link.right.icon-phone::before {
+  margin: 0 5px 0 0;
+}
+
+@media (max-width: 319px) {
+  .screen__toledo {
+    font-size: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .screen__toledo {
+    font-size: 6vh;
+  }
+  .menu {
+    margin: 0px 20px 0 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .screen__toledo {
+    font-size: 8vh;
+  }
+}
+
+@media (min-width: 1500px) {
+  .screen__toledo {
+    font-size: 9.5vh;
+  }
+}
+
+@media (max-width: 300px) {
+  .screen__toledo {
+    font-size: 5vh;
+  }
+}

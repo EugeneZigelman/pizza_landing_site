@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* Вторая страница */
+.flex__container {
+  position: relative;
+  padding-top: 50px;
+  padding-right: 25px;
+  padding-left: 5px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .flex__container {
+    grid-template: 33.3333% 33.3333% 33.3333%/33.3333% 33.3333% 33.3333%;
+  }
+}
+@media (max-width: 1200px) {
+  .flex__container {
+    grid-template: 50% 50%/50% 50%;
+  }
+}
+@media (max-width: 768px) {
+  .flex__container {
+    grid-template: 50% 50%/50% 50%;
+  }
+}
+@media (max-width: 520px) {
+  .flex__container {
+    grid-template: 50% 50%/50% 50%;
+  }
+}
+@media (max-width: 420px) {
+  .flex__container {
+    grid-template: 50% 50%/100%;
+  }
+}
+@media (max-width: 319px) {
+  .flex__container {
+    grid-template: 100%/100%;
+  }
+}
+
+.product__item {
+  display: grid;
+  overflow: hidden;
+  /* flex-wrap:wrap; */
+}
+@media (min-width: 1200px) {
+  .product__item {
+    grid-template: 100%/60% 40%;
+  }
+}
+@media (max-width: 1200px) {
+  .product__item {
+    grid-template: 100%/60% 40%;
+  }
+}
+@media (max-width: 768px) {
+  .product__item {
+    grid-template: 60% 40%/100%;
+  }
+}
+@media (max-width: 520px) {
+  .product__item {
+    grid-template: 60% 40%/100%;
+  }
+}
+@media (max-width: 420px) {
+  .product__item {
+    grid-template: 60% 40%/100%;
+  }
+}
+@media (max-width: 319px) {
+  .product__item {
+    grid-template: 60% 40%/100%;
+  }
+}
+
+.products__image {
+  position: relative;
+  display: flex;
+  /* display:block; */
+  flex: 0 0 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__image img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  object-fit: cover;
+}
+
+.products__name {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  color: white;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__text {
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.pizza_menu.screen.ch_menu .products__text {
+  color: #1f3f1d;
+}
+
+.ch_menu {
+  background: url("/img/pizza/child_fon.jpg") no-repeat center/cover;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 540px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.products__button {
+  display: none;
+}/*# sourceMappingURL=menu_pages.css.map */
